@@ -4,16 +4,9 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/api/evaluate", "dest": "server.js" },
-    { "src": "/stats", "dest": "server.js" },
-    { "src": "/locations/(.*)", "dest": "/public/locations/$1" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    { "src": "/(.*)", "dest": "server.js" }
   ]
 }
