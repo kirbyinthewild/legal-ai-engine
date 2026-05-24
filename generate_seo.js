@@ -165,7 +165,7 @@ const template = (city, state) => `
 </html>
 `;
 
-const outputDir = path.join(__dirname, 'public', 'locations');
+const outputDir = path.join(__dirname, 'locations'); // Remove 'public' from here
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
 cities.forEach(city => {
